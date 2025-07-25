@@ -9,7 +9,7 @@ const port = process.env.PORT || 5001;
 connectDB();
 
 app.use(cors({
-    origin: 'http://localhost:3000', // your Next.js frontend
+    origin: process.env.APPLICATION_URL, // your Next.js frontend
     credentials: true
 }));
 app.use(express.json()) //which is to read json object if user pass payload
